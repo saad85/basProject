@@ -28,6 +28,8 @@ a{
 	clear:both;
 	
 }
+
+
 header{
 	padding:30px 20px;
 	
@@ -45,16 +47,24 @@ header span{
 section{
 	padding:30px 20px 20px 20px;
 }
+h2{
+	color:#000;
+	margin-bottom:10px;
+	
+}
 
 footer{
+	margin-top:650px;
 	padding:20px;
 	background:#f4f4f4;
 	text-align:center;
+	
 }
 
 #search-form{
 	display:block;
-	margin-bottom:15px;
+	margin-top:20px;
+	margin-bottom:20px;
 	
 }
 .fieldcontainer{
@@ -62,7 +72,7 @@ footer{
 	position:relative;
 	
 	width:90%;
-	margin:0 auto;
+	margin:10 auto;
 	
 }
 #search-btn:hover{
@@ -97,7 +107,7 @@ footer{
 #search-btn{
 	position:absolute;
 	right:360px;
-	top:5px;
+	top:50px;
 	height:32px;
 	width:32px;
 	border:0;
@@ -117,6 +127,7 @@ footer{
 	border-bottom:1px #ccc dotted;
 	list-style:none;
 	overflow:auto;
+	height:100px;
 }
 .list-left{
 	float:left;
@@ -132,6 +143,7 @@ footer{
 .list-right{
 	float:right;
 	width:78%;
+	
 
 }
 .cTitle{
@@ -153,10 +165,131 @@ footer{
 	cursor:pointer;
 }
 
+#slider {
+    width: 720px;
+    height: 400px;
+    overflow: hidden;
+}
+
+#slider .slides {
+    display: block;
+    width: 6000px;
+    height: 400px;
+    margin: 0;
+    padding: 0;
+}
+
+#slider .slide {
+    float: left;
+    list-style-type: none;
+    width: 720px;
+    height: 400px;
+}
+
+/* helper css, since we don't have images */
+.slide1 {background:;}
+.slide2 {background: ;}
+.slide3 {background: ;}
+.slide4 {background: purple;}
+.slide5 {background: pink;}
+
+	
+
+td {
+	border:  2px solid #333;
+	height:  100px;
+	width:  100px;
+	text-align:  center;
+	vertical-align:  middle;
+	font-family:  "Comic Sans MS", cursive, sans-serif;
+	font-size:  70px;
+	cursor: pointer;
+}
+
+table {
+	margin-top:25px;
+	border-collapse: collapse;
+	
+	left: 50%;
+	margin-left: 250px;
+	top: 850px;
+}
+
+table tr:first-child td {
+	border-top: 0;
+}
+
+table tr:last-child td {
+	border-bottom: 0;
+}
+
+table tr td:first-child {
+	border-left: 0;
+}
+
+table tr td:last-child {
+	border-right: 0;
+}
+
+.endgame {
+  display: none;
+  width: 200px;
+  top: 120px;
+  background-color: rgba(205,133,63, 0.8);
+  position: absolute;
+  left: 50%;
+  margin-left: -100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  font-size: 2em;
+}
 
 
 
+#board{
+	height:
+	
+}
 
+#board td{
+	border:  2px solid #333;
+	
+	
+	margin:10px;
+	height:120px;
+	width:120px;
+	font-size:55px;
+	background:#333;
+	color:#ccc;
+	list-style:none;
+	text-align:center;
+	border-radius:5px;
+	
+	
+	
+}
 
+#board td: hover{
+	cursor:pointer;
+	background:#000;
+}
 
-
+#reset{
+	border:0;
+	background:#444;
+	color:#fff;
+	width:70%;
+	padding:15px;
+	border-radius:5px;
+	
+	
+}
+.o{
+	color:green ! important;
+}
+.x{
+	color:red ! important;
+}

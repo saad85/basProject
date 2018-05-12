@@ -13,27 +13,63 @@
 	
 		</script>
 		
-		<script>
-		$(document).ready(function(){
-		 $('.fancybox').fancybox({
-		
-			type:'iframe'
-		 });
-		
-		})
-		
-		
-		</script>
+	
  
 	</head> 
 	<body>
+	
+	
+	<script>
+		$(document).ready(function(){
+		 $('.fancybox').fancybox({
+		
+			
+		 });
+		
+		});
+		
+		
+		</script>
+	
+	
+	
+	
+	
+	
+	
+	
+	
 		<div id = "container">
-			<header>
-				<h1>Search <span>Vidz</span></h1>
-				<p> Search all youtube videos</p>
+		
+		<header>
+		<h1>Search <span>Vidz</span></h1>
+				<p> Search all youtube videos
+				</p>
+		
+		</header>
+	
+		
+		 <div id="slider">
+                <ul class="slides">
+                    <li class="slide slide1">slide1<img src="img/Webp.net-resizeimage.jpg"/></li>
+                    <li class="slide slide2">slide2<img src="img/Webp.net-resizeimage (1).jpg"/></li>
+                    <li class="slide slide2">slide2<img src="img/Webp.net-resizeimage (2).jpg"/></li>
+                    <li class="slide slide2">slide2<img src="img/Webp.net-resizeimage (3).jpg"/></li>
+                    <li class="slide slide2">slide2<img src="img/Webp.net-resizeimage (4).jpg"/></li>
+                    <li class="slide slide3">slide3</li>
+                    <li class="slide slide4">slide4</li>
+                    <li class="slide slide5">slide5</li>
+                    <li class="slide slide1">slide1</li>
+                </ul>
+            </div>
 
-			</header>
+        
+		
+			
+			
+			
 		<section>
+					<h2> SEARCH VIDEO HERE!!</h2>
 			<form id="search-form" name="search-form" onsubmit="return search()">
 				<div class="fieldcontainer">
 					<input type="search" id ="query" class="search-field" placeholder="search youtube">
@@ -47,10 +83,46 @@
 			</form>
 				<ul id ="results"></ul>
 				<div id="buttons"></div>
-
-
+			
+	
 		</section>
-			<footer>copyrights</footer>
+		
+	<button id="btn" class="paging-button" onClick="startGame()">Play TIC TAC TOE</button>	
+	<button id="btn" class="paging-button" onClick="startGame()">Replay</button>	
+
+		
+	
+	<table>
+		<tr>
+			<td class="cell" id="0"></td>
+			<td class="cell" id="1"></td>
+			<td class="cell" id="2"></td>
+		</tr>
+		<tr>
+			<td class="cell" id="3"></td>
+			<td class="cell" id="4"></td>
+			<td class="cell" id="5"></td>
+		</tr>
+		<tr>
+			<td class="cell" id="6"></td>
+			<td class="cell" id="7"></td>
+			<td class="cell" id="8"></td>
+		</tr>
+	</table>
+	<div class="endgame">
+		<div class="text"></div>
+	</div>
+	
+		
+		
+		
+		<div class="clearfix"></div>
+		<footer >
+		<button id="reset">Reset</button>
+		</footer>
+		
+		
+		<footer>copyrights</footer>
 			
 			
 	

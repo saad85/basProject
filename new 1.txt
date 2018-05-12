@@ -1,0 +1,4 @@
+#spot4{float:left;}
+#spot5{float:left;}
+#spot6{float:left;}
+#spot7{float:left;}

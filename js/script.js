@@ -1,4 +1,49 @@
 $(function(){
+	
+	var width = 720;
+	var animationSpeed = 1000;
+	var pause = 3000;
+	
+	
+	$slider = $('#slider');
+	$slideContainer = $slider.find('.slides');
+	$slide = $slideContainer.find('.slide');
+	var  currentSlide = 1;
+	var   interval;
+  function startSlide(){ interval = setInterval(function(){
+		$slideContainer.animate({'margin-left': '-='+width}, animationSpeed, function(){
+			currentSlide++;
+			if(currentSlide === $slide.length){
+				currentSlide = 1;
+				$slideContainer.css('margin-left',0);
+				
+			}
+				
+			
+			
+		});
+		 
+		
+		
+	},pause);
+  }
+	
+	function pauseSlide() {
+		clearInterval(interval);
+		
+		
+	}
+
+	
+	$slide.on('mouseenter', pauseSlide);
+	$slide.on('mouseleave', startSlide);
+	
+	
+
+	
+	
+	
+	
 	var searchField = $('#query');
 	var icon = $('#search-btn');
 	
@@ -184,7 +229,7 @@ function getOutput(item){
 	'<img src=" '+thumb+'">' + 
 	'</div>' + 
 	'<div class="list-right">' +
-	'<h3><a  href="https://www.youtube.com/embed/'+videoId+'"    class="utube" >' +title+ '</a></h3>'+'<small> by <span class= "ctitle">'+channelTitle+'</span> on '+videoDate+'<small>' +
+	'<h3><a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/'+videoId+'">' +title+ '</a></h3>'+'<small> by <span class= "ctitle">'+channelTitle+'</span> on '+videoDate+'<small>' +
 	'<p>'+description+'</p>' 
 	'</div>' +
 	'</li>' +
