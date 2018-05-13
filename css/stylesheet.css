@@ -20,13 +20,33 @@ a{
 	
 }
 #container{
-	width:740px;
+	width:720px;
 	background:#fff;
 	margin:auto;
 }
 .clearfix{
 	clear:both;
 	
+}
+nav{
+	float : right;
+}
+nav ul{
+	float : right;
+}
+nav li{
+	list-style:none;
+	float : left;
+	padding: 0 10px;
+}
+nav a {
+	color: #fff;
+	padding-bottom: 5px;
+	
+}
+nav li.current a, nav a:hover{
+	border-bottom:#03899c 3px solid;
+	color:#03899c;
 }
 
 
@@ -164,7 +184,32 @@ footer{
 	margin:10px;
 	cursor:pointer;
 }
-
+#gallery{
+	list-style:none;
+	margin:0;
+		padding:0;
+		width:100%
+}
+#gallery li{
+	display:block;
+	float:left;
+	width:23%;
+	cursor:pointer;
+	border-radius:5px;
+	
+	box-sizing:border-box;
+	margin:0 12px 7px 0;
+	position:relative;
+	
+	
+}
+#gallery img{
+	width:100%;
+	
+}
+#tbl{
+	display:none;
+}
 #slider {
     width: 720px;
     height: 400px;
@@ -186,12 +231,7 @@ footer{
     height: 400px;
 }
 
-/* helper css, since we don't have images */
-.slide1 {background:;}
-.slide2 {background: ;}
-.slide3 {background: ;}
-.slide4 {background: purple;}
-.slide5 {background: pink;}
+
 
 	
 
@@ -292,4 +332,28 @@ table tr td:last-child {
 }
 .x{
 	color:red ! important;
+}
+
+.overlay{
+	display:none;
+	background:#03899c  ;
+	color:#fff;
+	position:absolute;
+	
+	top:0;
+	left:0;
+	z-index:100;
+	width:100%;
+	height:100%;
+	padding:20px;
+	border-radius:5px;
+	box-sizing:border-box;
+	pointer-events:none;
+
+}
+.overlay h3{
+	
+	margin:0;
+	padding:0;
+	
 }

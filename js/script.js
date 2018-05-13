@@ -1,5 +1,74 @@
 $(function(){
+	//overlay
+	 var title=$(this).children().data('title');
+	var description=$(this).children().data('desc');
 	
+	$('ul#gallery li').on('mouseenter', function(){
+	
+	
+	
+	$(this).append('<div class="overlay"></div>');
+	
+	if(title == null){
+		
+		title = '';
+	}
+	
+	if(description == null){
+		
+		description = 'click to enlarge';
+	}
+	
+		var overlay = $(this).children('.overlay');
+		
+		overlay.html('<h3>'+title+'</h3><p>'+description+'</p>');
+		
+		overlay.fadeIn(800);
+	
+	
+	
+	})
+	$('ul#gallery li').on('mouseleave',function(){
+		
+		
+	$(this).append('<div class="overlay"></div>');
+	
+	
+	
+		var overlay = $(this).children('.overlay');
+		
+		overlay.html('<h3>'+title+'</h3><p>'+description+'</p>');
+		
+		overlay.fadeOut(800);
+	
+		
+		
+		
+		
+		
+		
+	})
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	//overlay ends
 	var width = 720;
 	var animationSpeed = 1000;
 	var pause = 3000;
@@ -73,6 +142,21 @@ $(function(){
 	$('#search-form').submit(function(e){
 		e.preventDefault();
 	});
+	
+	
+	//know_button
+	$('#buton').on('click', function(){
+		
+		
+		var paragraph = $('.para');
+		paragraph.html('<p>A video search engine is a web-based search engine which crawls the web for video content. Some video search engines parse externally hosted content while others allow content to be uploaded and hosted on their own servers. Some engines also allow users to search by video format type and by length of the clip. The video search results are usually accompanied by a thumbnail view of the video.</p>');
+		
+		
+		paragraph.fadeToggle('slow');
+	});
+	
+	//know_button
+	
 })
 
 function search(){
@@ -254,7 +338,10 @@ function getOutput(item){
 		 '<button id= "prev-button" class= "paging-button" data-token="'+prevPageToken+'" data-query="'+q+'"'+
 			   'onclick= "prevpage()">Prev Page</button></div>' + 
 		 '<button id= "next-button" class= "paging-button" data-token="'+nextPageToken+'" data-query="'+q+'"'+
-			   'onclick= "nextpage()">Next Page</button></div>'; 
+			   'onclick= "nextpage()">Next Page</button></div>'+
+			   '<button id= "next-button" class= "paging-button" data-token="'+nextPageToken+'" data-query="'+q+'"'+
+			   'onclick= "search()">search again</button></div>'
+			   
 		 
 		 
 		 

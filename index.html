@@ -3,15 +3,15 @@
 	<head>
 		<title>Search video</title>
 		<link rel="stylesheet" href="css/stylesheet.css">
+		<link rel="stylesheet" href="css/lightbox.css">
 		<link rel="stylesheet" href="css/jquery.fancybox.css" >
 		
 		
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src= "js/script.js"></script>
-		<script src= "js/jquery.fancybox.pack.js">
-	
-		</script>
+		<script src= "js/jquery.fancybox.pack.js"></script>
+		<script src= "js/lightbox.js"></script>
 		
 	
  
@@ -42,6 +42,15 @@
 		<div id = "container">
 		
 		<header>
+		<nav>
+		<ul>
+		<li>Home</li>
+		<li>About</li>
+		<li>Contact</li>
+		
+		</ul>
+		
+		</nav>
 		<h1>Search <span>Vidz</span></h1>
 				<p> Search all youtube videos
 				</p>
@@ -53,13 +62,12 @@
                 <ul class="slides">
                     <li class="slide slide1">slide1<img src="img/Webp.net-resizeimage.jpg"/></li>
                     <li class="slide slide2">slide2<img src="img/Webp.net-resizeimage (1).jpg"/></li>
-                    <li class="slide slide2">slide2<img src="img/Webp.net-resizeimage (2).jpg"/></li>
-                    <li class="slide slide2">slide2<img src="img/Webp.net-resizeimage (3).jpg"/></li>
-                    <li class="slide slide2">slide2<img src="img/Webp.net-resizeimage (4).jpg"/></li>
-                    <li class="slide slide3">slide3</li>
-                    <li class="slide slide4">slide4</li>
-                    <li class="slide slide5">slide5</li>
-                    <li class="slide slide1">slide1</li>
+                    <li class="slide slide3">slide2<img src="img/Webp.net-resizeimage (2).jpg"/></li>
+                    <li class="slide slide4">slide2<img src="img/Webp.net-resizeimage (3).jpg"/></li>
+                    <li class="slide slide5">slide2<img src="img/Webp.net-resizeimage (4).jpg"/></li>
+                    <li class="slide slide6">slide3<img src="img/live_concert.jpg"/></li>
+                    <li class="slide slide7">slide4<img src="img/guitar-classical-guitar-acoustic-guitar-electric-guitar.jpg"/></li>
+                    
                 </ul>
             </div>
 
@@ -83,16 +91,27 @@
 			</form>
 				<ul id ="results"></ul>
 				<div id="buttons"></div>
-			
+			<button id="btn" class="paging-button" onclick=" return search()" >Search !</button>
 	
 		</section>
+		<h1 >  WHAT TO SEARCH? </h1>
+	<button id="buton" class="paging-button" >CLICK HERE !</button>
+		<p class = "para"></p>
 		
-	<button id="btn" class="paging-button" onClick="startGame()">Play TIC TAC TOE</button>	
-	<button id="btn" class="paging-button" onClick="startGame()">Replay</button>	
-
+		<h1 id= "heading"> View pictures</h1>
+		<ul id="gallery">
+		<li class="youtube" ><a href ="img/Webp.net-resizeimage.jpg" data-lightbox="projects" data-title="project-1" data-desc="know youtube youtube"><img src="img/Webp.net-resizeimage.jpg"/></a></li>
+		<li class="music" ><a href ="img/Webp.net-resizeimage.jpg" data-lightbox="projects" data-title="project-1" data-desc="know youtube youtube"><img src="img/Webp.net-resizeimage.jpg"/></a></li>
+		<li class="movies" ><a href ="img/Webp.net-resizeimage.jpg" data-lightbox="projects" data-title="project-1" data-desc="know youtube youtube"><img src="img/Webp.net-resizeimage.jpg"/></a></li>
 		
+		<li class="cartoon" ><a href ="img/Webp.net-resizeimage.jpg" data-lightbox="projects" data-title="project-1" data-desc="know youtube youtube"><img src="img/Webp.net-resizeimage.jpg"/></a></li>
+		<li class="tutorial" ><a href ="img/Webp.net-resizeimage.jpg" data-lightbox="projects" data-title="project-1" data-desc="know youtube youtube"><img src="img/Webp.net-resizeimage.jpg"/></a></li>
+		
+		
+		
+		</ul>
 	
-	<table>
+	<table id="tbl">
 		<tr>
 			<td class="cell" id="0"></td>
 			<td class="cell" id="1"></td>
@@ -118,7 +137,7 @@
 		
 		<div class="clearfix"></div>
 		<footer >
-		<button id="reset">Reset</button>
+		
 		</footer>
 		
 		
